@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="926.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Сотрудник">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#addSotr" text="Добавить сотрудника" />
+                  <MenuItem mnemonicParsing="false" onAction="#updateSotr" text="Изменить данные сотрудника" />
+                  <MenuItem mnemonicParsing="false" onAction="#deleteSotr" text="Удалить сотрудника" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="380.0" prefWidth="926.0">
+         <children>
+            <TableView fx:id="sotrTable" layoutX="14.0" layoutY="28.0" prefHeight="269.0" prefWidth="400.0">
+              <columns>
+                <TableColumn fx:id="idSotr" prefWidth="33.0" text="id" />
+                <TableColumn fx:id="fam" prefWidth="105.0" text="Фамилия" />
+                  <TableColumn fx:id="oklad" prefWidth="114.0" text="Оклад" />
+                  <TableColumn fx:id="otrDay" prefWidth="129.0" text="Отработано дней" />
+              </columns>
+            </TableView>
+            <TableView fx:id="sotrTable1" layoutX="423.0" layoutY="28.0" prefHeight="269.0" prefWidth="481.0">
+               <columns>
+                  <TableColumn fx:id="fam2" prefWidth="135.0" text="Фамилия" />
+                  <TableColumn fx:id="nachisleno" prefWidth="107.0" text="Начислено" />
+                  <TableColumn fx:id="tax" prefWidth="106.0" text="Налог" />
+                  <TableColumn fx:id="vidach" prefWidth="113.0" text="К выдаче" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
